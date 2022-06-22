@@ -16,13 +16,13 @@ Circulator Lanes Dataset: the data is from https://data.baltimorecity.gov/Transp
 You can download CSV from the site above to your current working directory, or you can load it directly from the data/ folder in this repo [HINT: use the `here()` package].
 
 ```{r}
-library(tidyverse)
+library(tidyverse) # to use `read_csv()`
+library(here) # to use relative file paths
 
-circ = read_csv(paste0("http://sisbid.github.io/Module1/",
-                       "data/Charm_City_Circulator_Ridership.csv"))
+data_dir <- here("data//")
+
+circ <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
 ```
-
-
 
 1. How days are in the data set?  You can assume each observation/row is a different day
 ```{r q1}
