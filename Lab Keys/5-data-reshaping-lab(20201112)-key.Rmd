@@ -18,7 +18,7 @@ library(tidyverse)
 
 
 ```{r, message = FALSE}
-wide = read_csv(
+wide <- read_csv(
   paste0("http://sisbid.github.io/Module1/",
          "data/Charm_City_Circulator_Ridership.csv"))
 head(wide, 2)
@@ -31,7 +31,7 @@ class(wide$date)
 `daily`, `day`, `date`, using things like `-day`. Table `long$day`
 
 ```{r}
-long = wide %>%
+long <- wide %>%
   pivot_longer(cols = c(-date, -day, -daily), names_to = "route_info", values_to = "n_people") 
 
 table(long$day)
@@ -41,7 +41,7 @@ table(long$day)
 3.  Separate the `date` column into ("month", "day", "year") using the "/" character.
 Make sure you don't remove the `date` column. Call this `long2`. Create a table of the day column. Where did the original `day` column go?
 ```{r}
-long2 = separate(long, col = "date", into = c("month", "day", "year"), 
+long2 <- separate(long, col = "date", into = c("month", "day", "year"), 
                 sep = "/", remove = FALSE)
 table(long2$day)
 
@@ -50,7 +50,7 @@ table(long2$day)
 4. Create a new variable in `long2` calling it `newdate` using the `unite` function. Unite the year, month, day, columns using a hyphen (`-`) and then `table` the new column `newdate`
 
 ```{r}
-long2 = unite(long2, col = "newdate", year, month, day, sep = "-")
+long2 <- unite(long2, col = "newdate", year, month, day, sep = "-")
 head(long2)
 
 table(long2$newdate)
@@ -61,7 +61,7 @@ table(long2$newdate)
 "green", "banner") and the info ("Boardings", "Alightings", "Average") using `mutate` and `str_replace`.
 
 ```{r, error = TRUE}
-long = long %>% 
+long <- long %>% 
   mutate(
     route_info = route_info %>% 
       str_replace("Board", "_Board") %>% 
@@ -72,14 +72,14 @@ long = long %>%
 
 6.  Separate the `route_info` column from `long` (not `long2`) into ("route", "type") using a sep of "_"
 ```{r}
-long = separate(long, col = "route_info", into = c("route", "type"), 
+long <- separate(long, col = "route_info", into = c("route", "type"), 
                 sep = "_")
 ```
 
 7. Reshape `long` (not `long2`) using `pivot_wider`. Take the names from `route` and the values from `n_people`. Call this `wide_by_route`
 
 ```{r}
-wide_by_route = long %>% pivot_wider(names_from = route, values_from = n_people)
+wide_by_route <- long %>% pivot_wider(names_from = route, values_from = n_people)
 ```
 
 

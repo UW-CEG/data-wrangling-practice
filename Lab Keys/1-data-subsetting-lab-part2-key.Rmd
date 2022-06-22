@@ -20,13 +20,13 @@ library(tidyverse)
 1. In the data set `mpg`, rename the column `year` to `YEAR` using `rename`.
 
 ```{r}
-mpg = mpg %>% rename(YEAR = year)
+mpg <- mpg %>% rename(YEAR = year)
 ```
 
 2. Convert the column names of `mpg` to all upper case. Use `rename_all`, and the `toupper` command (or `colnames`).
 
 ```{r}
-mpg = rename_all(mpg, toupper)
+mpg <- rename_all(mpg, toupper)
 head(mpg)
 ```
 
@@ -35,14 +35,14 @@ head(mpg)
 3. Re-order the rows of `mpg` by `CYL` in increasing order. Use `arrange()`
 
 ```{r}
-mpg = mpg %>% arrange(CYL)
+mpg <- mpg %>% arrange(CYL)
 ```
 
 
 4. Create a new variable in `mpg` called `CTY2`, which  is equal to `CTY^2`, using `mutate()`.  Use piping `%>%`:
 
 ```{r}
-mpg = mpg %>% mutate(CTY2 = CTY^2)
+mpg <- mpg %>% mutate(CTY2 = CTY^2)
 mpg
 ```
 
@@ -51,7 +51,7 @@ mpg
 `case_when` or `ifelse`, %in%, and `mutate`:
 
 ```{r}
-mpg = mpg %>% 
+mpg <- mpg %>% 
   mutate(
     group_class = case_when(
       CLASS %in% c("compact", "midsize", "minivan",
