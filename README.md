@@ -1,4 +1,4 @@
 # data-wrangling-practice
 
-Labs borrowed from the SISBD 2019 workshop
+Labs and data borrowed from the [SISBID Data Wrangling Workshop](https://github.com/SISBID/Data-Wrangling).
 
