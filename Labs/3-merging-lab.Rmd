@@ -23,26 +23,25 @@ head(crash)
 # head(road)
 ```
 
-
-2. Join data to retain only complete data, (using an inner join) e.g. those observations with road lengths and districts.  Merge without using `by` argument, then merge using `by = "Road"`. call the output `merged.`  How many observations are there?
-
-```{r}
-
-```
-
-3. Join data using a `full_join.`  Call the output `full.`   How many observations are there?
+2.  Join data to retain only complete data, (using an inner join) e.g. those observations with road lengths and districts. Merge without using `by` argument, then merge using `by = "Road"`. call the output `merged.` How many observations are there?
 
 ```{r}
 
 ```
 
-4. Do a left join of the `road` and `crash`.  ORDER matters here!  How many observations are there?
+3.  Join data using a `full_join.` Call the output `full.` How many observations are there?
 
 ```{r}
 
 ```
 
-5. Repeat above with a `right_join` with the same order of the arguments. How many observations are there?
+4.  Do a left join of the `road` and `crash`. ORDER matters here! How many observations are there?
+
+```{r}
+
+```
+
+5.  Repeat above with a `right_join` with the same order of the arguments. How many observations are there?
 
 ```{r}
 
