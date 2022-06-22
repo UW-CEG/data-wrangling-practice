@@ -19,7 +19,10 @@ You can download CSV from the site above to your current working directory, or y
 library(tidyverse) # to use `read_csv()`
 library(here) # to use relative file paths
 
-data_dir <- here("data//")
+data_dir <- here("data//") 
+# to create a string variable that contains the directory path to 
+# the data/ subdirectory on your computer. R will interpret the double
+# backslash after "data" as a single backslash when it creates the string
 
 circ <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
 ```
