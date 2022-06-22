@@ -4,11 +4,16 @@ author: "Data Wrangling in R"
 output: html_document
 ---
 
-This exercise is motivated by https://anythingbutrbitrary.blogspot.com/2012/08/manipulating-data-frames-using-sqldf.html
+This exercise is motivated by <https://anythingbutrbitrary.blogspot.com/2012/08/manipulating-data-frames-using-sqldf.html>
 
-1. read in the roads and crashes CSVs.  Call them `crash` and `road`
-`crash`: https://sisbid.github.io/Module1/labs//crashes.csv
-`road`: https://sisbid.github.io/Module1/labs//roads.csv
+0.  Load any necessary libraries.
+
+```{r}
+library(tidyverse)
+library(here)
+```
+
+1.  Read in the roads and crashes CSVs from the data/ folder. Call them `crash` and `road`. (These files can also be obtained at `crash`: <https://sisbid.github.io/Module1/labs/crashes.csv>, `road`: <https://sisbid.github.io/Module1/labs/roads.csv>). Explore the first few lines of each dataframe using the `head()` function.
 
 ```{r}
 crash = read_csv("https://sisbid.github.io/Module1/labs/crashes.csv")
