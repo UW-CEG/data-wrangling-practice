@@ -3,12 +3,15 @@ title: "Data I/O Lab, Part 1"
 output: html_document
 ---
 
-This lab uses different versions of the `iris` dataset.
-You can see more about this dataset by running `?iris` in the console.
+This lab uses different versions of the `iris` dataset, which you can find in the data/iris subfolder. (This dataset is also included as an example to play with in standard R installations. You can learn more about it by running `?iris` in the console.)
+
+0. Load necessary libraries
 
 ```{r} 
-library(readr)
+library(tidyverse)
 library(readxl)
+library(here)
+```
 ```
 
 1. Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
