@@ -12,17 +12,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(tidyverse)
+library(here)
 ```
 
-1.  Read in the Circulator Data from http://sisbid.github.io/Module1/data/Charm_City_Circulator_Ridership.csv.  Name the data set `wide`.
+1. This lab uses the the Charm City Circulator Dataset, the same data set from Labs 2 and 4. Read the data set into an R object called `wide`.
 
+```{r}
+data_dir <- here("data//")
 
-```{r, message = FALSE}
-wide <- read_csv(
-  paste0("http://sisbid.github.io/Module1/",
-         "data/Charm_City_Circulator_Ridership.csv"))
-head(wide, 2)
-class(wide$date)
+wide <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
 ```
 
 

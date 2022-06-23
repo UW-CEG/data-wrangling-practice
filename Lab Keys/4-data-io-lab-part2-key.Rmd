@@ -10,13 +10,17 @@ library(dplyr)
 library(tidyverse)
 library(naniar)
 library(visdat)
+library(here)
 ```
 
 
-1. Read in the the Charm City Circulator Dataset from "http://sisbid.github.io/Module1/data/Charm_City_Circulator_Ridership.csv" using `read_csv`, call it `circ`
+1. This lab uses the the Charm City Circulator Dataset, the same data set from Lab 2. Use `here()` and `read_csv()` to load the data set into the `circ` R object.
 ```{r}
-circ <- read_csv("http://sisbid.github.io/Module1/data/Charm_City_Circulator_Ridership.csv")
+data_dir <- here("data//")
+
+circ <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
 ```
+
 2. Print the number of rows of `circ`
 ```{r}
 nrow(circ)
