@@ -13,52 +13,59 @@ library(tidyverse)
 library(here)
 ```
 
-1. This lab uses the the Charm City Circulator Dataset, the same data set from Labs 2 and 4. Read the data set into an R object called `wide`.
+1.  This lab uses the the Charm City Circulator Dataset, the same data set from Labs 2 and 4. Read the data set into an R object called `wide`.
 
 ```{r}
 
 ```
 
-
-2. Reshape `wide` using `pivot_long`  Call this data `long` Assign "route_info" to `names_to`,
-"n_people" to `values_to`. Make sure to pivot all columns **but**
-`daily`, `day`, `date`, using things like `-day`. Table `long$day`
+2.  Reshape `wide` using `pivot_long` Call this data `long` Assign "route_info" to `names_to`, "n_people" to `values_to`. Make sure to pivot all columns **but** `daily`, `day`, `date`, using things like `-day`. Table `long$day`
 
 ```{r}
 
 ```
 
+Run the code chunk below to compare the structure of `wide` and `long`.
 
-3.  Separate the `date` column into ("month", "day", "year") using the "/" character.
-Make sure you don't remove the `date` column. Call this `long2`. Create a table of the day column. Where did the original `day` column go?
+```{r}
+wide
+long
+```
+
+3.  Use the `separate()` function to separate the `date` column into ("month", "day", "year") using the "/" character. Make sure you don't remove the `date` column. Call this `long2`. Create a table of the day column. Where did the original `day` column go?
+
 ```{r}
 
 
 ```
 
-4. Create a new variable in `long2` calling it `newdate` using the `unite` function. Unite the year, month, day, columns using a hyphen (`-`) and then `table` the new column `newdate`
+Run the code chunk below to compare the structure of `long` and `long2`.
+
+```{r}
+long
+long2
+```
+
+4.  Create a new variable in `long2` calling it `newdate` using the `unite` function. Unite the year, month, day, columns using a hyphen (`-`) and then `table` the new column `newdate`
 
 ```{r}
 
 ```
 
-
-5. Back to `long`. Add the "_" character to the `route_info` values between the route name ("orange", "purple",
-"green", "banner") and the info ("Boardings", "Alightings", "Average") using `mutate` and `str_replace`.
+5.  Back to `long`. Add the "\_" character to the `route_info` values between the route name ("orange", "purple", "green", "banner") and the info ("Boardings", "Alightings", "Average") using `mutate` and `str_replace`.
 
 ```{r, error = TRUE}
 
 ```
 
-6.  Separate the `route_info` column from `long` (not `long2`) into ("route", "type") using a sep of "_"
-```{r}
-
-```
-
-7. Reshape `long` (not `long2`) using `pivot_wider`. Take the names from `route` and the values from `n_people`. Call this `wide_by_route`
+6.  Separate the `route_info` column from `long` (not `long2`) into ("route", "type") using a sep of "\_"
 
 ```{r}
 
 ```
 
+7.  Reshape `long` (not `long2`) using `pivot_wider`. Take the names from `route` and the values from `n_people`. Call this `wide_by_route`
 
+```{r}
+
+```
