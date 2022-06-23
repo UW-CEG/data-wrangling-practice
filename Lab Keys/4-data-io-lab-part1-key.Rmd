@@ -13,7 +13,9 @@ library(readxl)
 library(here)
 ```
 
-1.  Create path variable for the iris data subdirectory using `here()`
+1.  Explore the different versions of the iris data files to see what type of data delimiter each one employs. In the file explorer panel in RStudio, navigate to the data/iris directory and then click on each file one at a time. For most of the files, clicking on it will bring up a dialog box with two options: "View File" and "Import Dataset...". Click on "View File". 
+
+2.  Create path variable for the iris data subdirectory using `here()`
 
 ```{r}
 iris_data_dir <- here("data/iris//") 
@@ -21,43 +23,42 @@ iris_data_dir <- here("data/iris//")
 # string, not in the middle. Not sure why at this point in my R life...
 ```
 
-2. Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
+3. Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
 
 ```{r}
 iris_q1 <- read_csv(paste0(iris_data_dir, "iris_q1.csv"))
 head(iris_q1)
 ```
 
-3. Read in the `iris_q2.tsv` dataset into the `iris_q2` R object. What delimiter separates columns?
+4. Read in the `iris_q2.tsv` dataset into the `iris_q2` R object. What delimiter separates columns?
 
 ```{r}
 iris_q2 <- read_delim(paste0(iris_data_dir, "iris_q2.tsv"), delim = "\t")
 head(iris_q2)
 ```
 
-4. Read in the `iris_q3.txt` dataset into the `iris_q3` R object. What delimiter separates columns?
+5. Read in the `iris_q3.txt` dataset into the `iris_q3` R object. What delimiter separates columns?
 
 ```{r}
 iris_q3 <- read_delim(paste0(iris_data_dir, "iris_q3.txt"), delim = " ")
 head(iris_q3)
 ```
 
-5. Read in the `iris_q4.csv` dataset into the `iris_q4` R object. What delimiter separates columns? [hint: file extension is ambiguous]
+6. Read in the `iris_q4.csv` dataset into the `iris_q4` R object. What delimiter separates columns? [hint: file extension is ambiguous]
 
 ```{r}
 iris_q4 <- read_delim(paste0(iris_data_dir, "iris_q4.csv"), delim = ":")
 head(iris_q4)
 ```
 
-6. Read in the `iris_q5.csv` dataset into the `iris_q5` R object. Some entries are supposed to be missing, e.g. have the value `NA` in the data.  
+7. Read in the `iris_q5.csv` dataset into the `iris_q5` R object. Some entries are supposed to be missing, e.g. have the value `NA` in the data.  
 
 ```{r}
 iris_q5 <- read_csv(paste0(iris_data_dir, "iris_q5.csv"), na = "-999")
 head(iris_q5)
 ```
 
-7. Read in the `iris_q6.xlsx` dataset into the `iris_q6` R object. How many rows are in the dataset?
-
+8. Read in the `iris_q6.xlsx` dataset into the `iris_q6` R object. How many rows are in the dataset?
 
 ```{r}
 iris_q6 <- read_excel(paste0(iris_data_dir, "iris_q6.xlsx"), sheet= 2)
