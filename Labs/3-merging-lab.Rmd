@@ -17,7 +17,7 @@ library(here)
 1.  Read in the roads and crashes CSVs from the data/ folder. Call them `crash` and `road`. (These files can also be obtained at `crash`: <https://sisbid.github.io/Module1/labs/crashes.csv>, `road`: <https://sisbid.github.io/Module1/labs/roads.csv>). Explore the first few lines of each dataframe using the `head()` function. 
 
 ```{r}
-crash = read_csv("https://sisbid.github.io/Module1/labs/crashes.csv")
+crash <- read_csv("https://sisbid.github.io/Module1/labs/crashes.csv")
 head(crash)
 # need to do the same for road
 # head(road)
