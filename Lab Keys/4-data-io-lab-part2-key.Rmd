@@ -3,6 +3,12 @@ title: "Data I/O Lab, Part 1"
 output: html_document
 ---
 
+RUN THIS BEFORE YOU START TO CLEAR ANY VARIABLES/OBJECTS FROM THE R ENVIRONMENT THAT COULD INTERFERE WITH YOUR WORK IN THIS ACTIVITY.
+```{r}
+rm(list=ls())
+```
+
+
 In this lab you can use the interactive console to explore but please record your commands here.  Remember anything you type here can be "sent" to the console with Cmd-Enter (OS-X) or Cntr-Enter (Windows/Linux) (But only in side the ```{r}``` areas).
 
 ```{r, message = FALSE}

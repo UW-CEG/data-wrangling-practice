@@ -3,6 +3,12 @@ title: "R markdown lab"
 output: html_document
 ---
 
+RUN THIS BEFORE YOU START TO CLEAR ANY VARIABLES/OBJECTS FROM THE R ENVIRONMENT THAT COULD INTERFERE WITH YOUR WORK IN THIS ACTIVITY.
+```{r}
+rm(list=ls())
+```
+
+
 1. Try compiling this document using the "Knit HTML" button. What files are produced?
 2. Edit the output to be "pdf_document" and recompile. What files are produced?
 3. Edit the output to be "word_document" and recompile. What files are produced?

@@ -4,6 +4,12 @@ author: "Data Wrangling in R"
 output: html_document
 ---
 
+RUN THIS BEFORE YOU START TO CLEAR ANY VARIABLES/OBJECTS FROM THE R ENVIRONMENT THAT COULD INTERFERE WITH YOUR WORK IN THIS ACTIVITY.
+```{r}
+rm(list=ls())
+```
+
+
 This exercise is motivated by <https://anythingbutrbitrary.blogspot.com/2012/08/manipulating-data-frames-using-sqldf.html>
 
 0. Load any necessary libraries.

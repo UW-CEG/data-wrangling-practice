@@ -3,6 +3,11 @@ title: "Data I/O Lab, Part 1"
 output: html_document
 ---
 
+RUN THIS BEFORE YOU START TO CLEAR ANY VARIABLES/OBJECTS FROM THE R ENVIRONMENT THAT COULD INTERFERE WITH YOUR WORK IN THIS ACTIVITY.
+```{r}
+rm(list=ls())
+```
+
 
 ```{r, message = FALSE}
 library(dplyr)
