@@ -32,7 +32,6 @@ head(ufo)
 3. How many UFO sightings were reported on a time scale of minutes, specifically using the `duration (hours/min)` originally-named column? (hint: explore the various entries in this column and then use a `stringr` function to match a flexible pattern. you can ignore observations like "1/2 hour" and similar ones that don't contain some version of the word "minutes")
 
 ```{r}
-library(stringr)
 str_subset(ufo$duration_hours_min, "min") %>% length()
 ```
 
