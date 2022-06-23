@@ -16,41 +16,43 @@ library(here)
 1.  Create path variable for the iris data subdirectory using `here()`
 
 ```{r}
-
+iris_data_dir <- here("data/iris//") 
+# For some reason, you only need to have a double slash at the end of the directory
+# string, not in the middle. Not sure why at this point in my R life...
 ```
 
 2. Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
 
 ```{r}
-iris_q1 <- read_csv("../data/iris/iris_q1.csv")
+iris_q1 <- read_csv(paste0(iris_data_dir, "iris_q1.csv"))
 head(iris_q1)
 ```
 
 3. Read in the `iris_q2.tsv` dataset into the `iris_q2` R object. What delimiter separates columns?
 
 ```{r}
-iris_q2 <- read_delim("../data/iris/iris_q2.tsv", delim = "\t")
+iris_q2 <- read_delim(paste0(iris_data_dir, "iris_q2.tsv"), delim = "\t")
 head(iris_q2)
 ```
 
 4. Read in the `iris_q3.txt` dataset into the `iris_q3` R object. What delimiter separates columns?
 
 ```{r}
-iris_q3 <- read_delim("../data/iris/iris_q3.txt", delim = " ")
+iris_q3 <- read_delim(paste0(iris_data_dir, "iris_q3.txt"), delim = " ")
 head(iris_q3)
 ```
 
 5. Read in the `iris_q4.csv` dataset into the `iris_q4` R object. What delimiter separates columns? [hint: file extension is ambiguous]
 
 ```{r}
-iris_q4 <- read_delim("../data/iris/iris_q4.csv", delim = ":")
+iris_q4 <- read_delim(paste0(iris_data_dir, "iris_q4.csv"), delim = ":")
 head(iris_q4)
 ```
 
 6. Read in the `iris_q5.csv` dataset into the `iris_q5` R object. Some entries are supposed to be missing, e.g. have the value `NA` in the data.  
 
 ```{r}
-iris_q5 <- read_csv("../data/iris/iris_q5.csv", na = "-999")
+iris_q5 <- read_csv(paste0(iris_data_dir, "iris_q5.csv"), na = "-999")
 head(iris_q5)
 ```
 
@@ -58,6 +60,6 @@ head(iris_q5)
 
 
 ```{r}
-iris_q6 <- read_excel("../data/iris/iris_q6.xlsx", sheet= 2)
+iris_q6 <- read_excel(paste0(iris_data_dir, "iris_q6.xlsx"), sheet= 2)
 dim(iris_q6)
 ```
