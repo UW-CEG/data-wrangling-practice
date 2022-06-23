@@ -9,10 +9,24 @@ editor_options:
 
 Circulator Lanes Dataset: the data is from https://data.baltimorecity.gov/Transportation/Charm-City-Circulator-Ridership/wwvu-583r
 
-You can download CSV from the site above to your current working directory, or you can load it directly from the data/ folder in this repo [HINT: use the `here()` package and the assignment: `data_dir <- here("data//")`].
+You can download CSV from the site above to your current working directory, or you can load it directly from the data/ folder in this repo. Run the code chunk below to load the data set into an R object called `circ`.
 
 ```{r}
+library(tidyverse) # to use `read_csv()`
+library(here) # to use relative file paths
 
+data_dir <- here("data//") 
+# to create a string variable that contains the directory path to 
+# the data/ subdirectory on your computer. R will interpret the double
+# backslash after "data" as a single backslash when it creates the string
+
+circ <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
+```
+
+What is contained in the object `data_dir`? Run the code below to find out:
+
+```{r}
+data_dir
 ```
 
 

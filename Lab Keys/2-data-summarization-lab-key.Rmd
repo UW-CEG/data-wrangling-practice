@@ -27,6 +27,13 @@ data_dir <- here("data//")
 circ <- read_csv(paste0(data_dir, "Charm_City_Circulator_Ridership.csv"))
 ```
 
+What is contained in the object `data_dir`? Run the code below to find out:
+
+```{r}
+data_dir
+```
+
+
 1. How days are in the data set?  You can assume each observation/row is a different day
 ```{r q1}
 nrow(circ)
