@@ -21,7 +21,7 @@ ufo <- read_csv(paste0(ufo_data_dir, "ufo_data_complete.csv"))
 head(ufo)
 ```
 
-2. Clean up the column/variable names of the `ufo` dataset to remove spaces and non-alphanumeric characters. You can use the `dplyr::rename()` function or look into the `janitor::clean_names()` function. 
+2. Clean up the column/variable names of the `ufo` dataset to remove spaces and non-alphanumeric characters. Load the `janitor` library (install it first if neded!) then run `clean_names()` on the dataframe. 
 
 ```{r}
 library(janitor)
