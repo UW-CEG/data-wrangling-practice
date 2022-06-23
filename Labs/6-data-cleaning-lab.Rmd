@@ -5,11 +5,12 @@ output: html_document
 
 ```{r}
 library(tidyverse)
+library(here)
 ```
 
 
 1. Read in the UFO dataset (used in the Data IO lectures) as an R object called `ufo`.
-You can read directly from the web here: https://raw.githubusercontent.com/SISBID/Module1/gh-pages/data/ufo/ufo_data_complete.csv . 
+You can open it from the data/ufo subdirectory, or you can read directly from the web here: https://raw.githubusercontent.com/SISBID/Module1/gh-pages/data/ufo/ufo_data_complete.csv . 
 You can ignore the "problems" with some rows. 
 
 ```{r}
