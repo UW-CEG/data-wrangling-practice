@@ -13,32 +13,44 @@ library(readxl)
 library(here)
 ```
 
-
-
-1. Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
+1.  Create path variable for the iris data subdirectory using `here()`
 
 ```{r}
 
 ```
 
+2.  Read in the `iris_q1.csv` dataset into the `iris_q1` R object. What delimiter separates columns?
 
-2. Read in the `iris_q2.tsv` dataset into the `iris_q2` R object. What delimiter separates columns?
 ```{r}
 
 ```
-3. Read in the `iris_q3.txt` dataset into the `iris_q3` R object. What delimiter separates columns?
+
+3.  Read in the `iris_q2.tsv` dataset into the `iris_q2` R object. What delimiter separates columns?
+
 ```{r}
 
 ```
-4. Read in the `iris_q4.csv` dataset into the `iris_q4` R object. What delimiter separates columns? [hint: file extension is ambiguous]
+
+4.  Read in the `iris_q3.txt` dataset into the `iris_q3` R object. What delimiter separates columns?
+
 ```{r}
 
 ```
-5. Read in the `iris_q5.csv` dataset into the `iris_q5` R object. Some entries are supposed to be missing, e.g. have the value `NA` in the data.  
+
+5.  Read in the `iris_q4.csv` dataset into the `iris_q4` R object. What delimiter separates columns? [hint: file extension is ambiguous]
+
 ```{r}
 
 ```
-6. Read in the `iris_q6.xlsx` dataset into the `iris_q6` R object. How many rows are in the dataset?
+
+6.  Read in the `iris_q5.csv` dataset into the `iris_q5` R object. Some entries are supposed to be missing, e.g. have the value `NA` in the data.\
+
+```{r}
+
+```
+
+7.  Read in the `iris_q6.xlsx` dataset into the `iris_q6` R object. How many rows are in the dataset?
+
 ```{r}
 
 ```
